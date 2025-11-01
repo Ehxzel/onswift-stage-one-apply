@@ -29,7 +29,12 @@ const formSchema = z.object({
   project3: z.string().max(100, "Maximum 100 characters").min(10, "Please describe your project"),
   hourlyRate: z.string().min(1, "Please select your hourly rate"),
   availability: z.string().min(1, "Please select your weekly availability"),
-  whyOnSwift: z.string().min(20, "Please write at least 20 words").max(500, "Maximum 500 characters"),
+  whyOnSwift: z.string()
+    .min(1, "This field is required")
+    .max(500, "Maximum 500 characters")
+    .refine((val) => val.trim().split(/\s+/).length >= 20, {
+      message: "Please write at least 20 words"
+    }),
 });
 
 type FormData = z.infer<typeof formSchema>;
