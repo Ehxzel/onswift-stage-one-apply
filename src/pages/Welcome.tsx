@@ -75,13 +75,13 @@ const Welcome = () => {
       {/* Footer */}
       <footer className="p-6 text-center">
         <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
-          <span>© 2024 OnSwift. All rights reserved.</span>
-          <a href="#" className="hover:text-foreground transition-colors">
+          <span>© 2025 OnSwift. All rights reserved.</span>
+          {/* <a href="#" className="hover:text-foreground transition-colors">
             Terms of Service
           </a>
           <a href="#" className="hover:text-foreground transition-colors">
             Privacy Policy
-          </a>
+          </a> */}
         </div>
       </footer>
     </div>
