@@ -50,6 +50,7 @@ export const ApplicationForm = () => {
     handleSubmit,
     watch,
     setValue,
+    reset,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -111,13 +112,13 @@ const onSubmit = async (data: FormData) => {
       body: JSON.stringify(payload),
     });
 
-    console.log(payload);
+    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const result = await response.json();
-    console.log("Submission successful:", result);
+    
 
     const isRejected = checkAutoRejection(data);
     setSubmitResult(isRejected ? "rejected" : "success");
@@ -127,6 +128,9 @@ const onSubmit = async (data: FormData) => {
   } finally {
     setIsSubmitting(false);
   }
+
+  reset();
+
 };
 
 
