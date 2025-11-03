@@ -10,13 +10,17 @@ const Welcome = () => {
     <div className="min-h-screen bg-gradient-subtle flex flex-col">
       {/* Header */}
       <header className="p-6">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">O</span>
-          </div>
-          <span className="text-2xl font-bold text-foreground">OnSwift</span>
+      <div className="flex items-center gap-2">
+        <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center overflow-hidden">
+          <img 
+            src="/white-logo.png" 
+            alt="OnSwift Logo" 
+            className="w-full h-full object-contain"
+          />
         </div>
-      </header>
+        <span className="text-2xl font-bold text-foreground">OnSwift</span>
+      </div>
+    </header>
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center px-4 py-12">
@@ -71,13 +75,13 @@ const Welcome = () => {
       {/* Footer */}
       <footer className="p-6 text-center">
         <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-muted-foreground">
-          <span>© 2024 OnSwift. All rights reserved.</span>
-          <a href="#" className="hover:text-foreground transition-colors">
+          <span>© 2025 OnSwift. All rights reserved.</span>
+          {/* <a href="#" className="hover:text-foreground transition-colors">
             Terms of Service
           </a>
           <a href="#" className="hover:text-foreground transition-colors">
             Privacy Policy
-          </a>
+          </a> */}
         </div>
       </footer>
     </div>
